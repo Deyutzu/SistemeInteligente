@@ -10,6 +10,8 @@ Suprafața forestieră totală per țară/an.
 Rata anuală de pierdere a pădurii.
 Progresul programelor de reîmpădurire.
 
+https://www.kaggle.com/datasets/ashyou09/global-deforestation-and-afforestation-2000-2025
+
 # Tehnologii propuse
 Limbaj: Python
 Librării: Pandas (manipulare date), Matplotlib/Seaborn (vizualizare), Scikit-Learn (modelare ML).
