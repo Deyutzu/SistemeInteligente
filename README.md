@@ -14,7 +14,19 @@ Conform sugestiei domnului profesor, am inclus în plan și un set de date secun
 https://www.kaggle.com/datasets/ashyou09/global-deforestation-and-afforestation-2000-2025
 https://data.worldbank.org/indicator/AG.LND.PRCP.MM
 
+# Surse de Date & Integrare SQL
+Proiectul utilizează două seturi de date principale care vor fi fuzionate într-o bază de date relațională:
+
+1.Dataset Defrișare (Kaggle): Conține date anuale despre pierderea și câștigul de suprafață forestieră per țară.
+2.Dataset Precipitații (World Bank): "Average precipitation in depth (mm per year)" - date oficiale despre nivelul mediu de precipitații.
+
+Metodologie SQL:
+Pentru a combina cele două surse (fișiere .csv), voi utiliza SQL (SQLite/Pandas SQL).
+Transformare: Datele de precipitații vor fi trecute din format "Wide" (ani pe coloane) în format "Long" (ani pe rânduri).
+Join: Voi efectua o operațiune de INNER JOIN folosind drept chei comune Country_Code și Year.
+
 # Tehnologii propuse
 Limbaj: Python
+Baze de Date: SQLite
 Librării: Pandas (manipulare date), Matplotlib/Seaborn (vizualizare), Scikit-Learn (modelare ML).
 Algoritmi vizați: Linear Regression, Random Forest Regressor.
