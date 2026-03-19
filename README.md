@@ -9,8 +9,10 @@ Acesta conține informații despre:
 Suprafața forestieră totală per țară/an.
 Rata anuală de pierdere a pădurii.
 Progresul programelor de reîmpădurire.
+Conform sugestiei domnului profesor, am inclus în plan și un set de date secundar pentru precipitații. Voi folosi SQL (SQLite) pentru a integra aceste două baze de date, facilitând astfel o analiză corelativă între precipitatii și evoluția fondului forestier.
 
 https://www.kaggle.com/datasets/ashyou09/global-deforestation-and-afforestation-2000-2025
+https://data.worldbank.org/indicator/AG.LND.PRCP.MM
 
 # Tehnologii propuse
 Limbaj: Python
