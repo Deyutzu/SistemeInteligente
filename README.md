@@ -12,21 +12,22 @@ Progresul programelor de reîmpădurire.
 Conform sugestiei domnului profesor, am inclus în plan și un set de date secundar pentru precipitații. Voi folosi SQL (SQLite) pentru a integra aceste două baze de date, facilitând astfel o analiză corelativă între precipitatii și evoluția fondului forestier.
 
 https://www.kaggle.com/datasets/ashyou09/global-deforestation-and-afforestation-2000-2025
-https://data.worldbank.org/indicator/AG.LND.PRCP.MM
+
+https://cds.climate.copernicus.eu/datasets/insitu-gridded-observations-global-and-regional
 
 # Surse de Date & Integrare SQL
 Proiectul utilizează două seturi de date principale care vor fi fuzionate într-o bază de date relațională:
 
 1.Dataset Defrișare (Kaggle): Conține date anuale despre pierderea și câștigul de suprafață forestieră per țară.
-2.Dataset Precipitații (World Bank): "Average precipitation in depth (mm per year)" - date oficiale despre nivelul mediu de precipitații.
+2.Dataset Precipitații (Copernicus): "Temperature and precipitation gridded data for global and regional domains derived from in-situ and satellite observations" - date oficiale despre nivelul mediu de precipitații si temperatura.
 
 Metodologie SQL:
-Pentru a combina cele două surse (fișiere .csv), voi utiliza SQL (SQLite/Pandas SQL).
+Pentru a combina cele două surse (fișiere .csv si .nc), voi utiliza SQL (SQLite/Pandas SQL).
 Transformare: Datele de precipitații vor fi trecute din format "Wide" (ani pe coloane) în format "Long" (ani pe rânduri).
 Join: Voi efectua o operațiune de INNER JOIN folosind drept chei comune Country_Code și Year.
 
 # Tehnologii propuse
 Limbaj: Python
 Baze de Date: SQLite
-Librării: Pandas (manipulare date), Matplotlib/Seaborn (vizualizare), Scikit-Learn (modelare ML).
+Librării: Pandas (manipulare date), Matplotlib/Seaborn (vizualizare), Scikit-Learn (modelare ML),xarray,NetCDF(prelucrare date Copernicus).
 Algoritmi vizați: Linear Regression, Random Forest Regressor.
